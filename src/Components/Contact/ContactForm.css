@@ -1,0 +1,97 @@
+
+
+.contact-section-home {
+  font-family: 'Arial', sans-serif;
+  background-image: url('food_image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: row;
+  background-color: #1e1e1e;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact-info-home {
+  margin-right: 40px;
+}
+
+.contact-info-home h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-info-home p {
+  margin: 10px 0;
+}
+
+.info-home p {
+  margin: 5px 0;
+}
+
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.social-media a {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.contact-form-home {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-row input {
+  width: 48%;
+  margin-bottom: 10px;
+}
+
+.contact-form-home input,
+.contact-form-home textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
+.contact-form-home textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-form-home button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff9900;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form-home button:hover {
+  background-color: #e68a00;
+}

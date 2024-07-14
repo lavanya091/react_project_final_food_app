@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia, serif';
+}
+
+nav {
+  position: absolute;
+  top:0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  border-bottom: 2px solid #ccc;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  margin: 0 10px;
+}
+nav ul li .nav-link{
+  color: white;
+}
+.nav-link, .nav-link1 {
+  text-decoration: none;
+  color: #555;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link1:hover {
+  color: #000;
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.transparent-button .btn {
+  color: #28a745;
+  padding: 8px 16px;
+  border: 2px solid #28a745;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.transparent-button .btn:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.transparent-button1 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.transparent-button1 .btn1 {
+  color: #007bff;
+  padding: 8px 16px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.transparent-button1 .btn1:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+}

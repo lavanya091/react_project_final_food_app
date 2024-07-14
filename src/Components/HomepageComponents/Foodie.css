@@ -1,0 +1,50 @@
+.food_div {
+    position: relative;
+    display: inline-block; /* Ensure the overlay can reference this element */
+    width: 100%;
+    /* height: 150vh; */
+}
+
+.image-food {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ensures the image covers the container proportionally */
+    
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* S3et the desired overlay color */
+    z-index: 1;
+}
+.subheading{
+    font-size: 16px;
+    font-weight: 900;
+    margin:0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+    z-index:0;
+    padding: 0 10px;
+}
+.subheading-2{
+    font-family: "Dancing Script", cursive;
+    font-size: 8vw; /* Adjust font size as needed */
+    font-weight: 400;
+    margin: 0;
+}
+.sub_Div{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:2;
+    text-align: center;
+    color: white;
+}
