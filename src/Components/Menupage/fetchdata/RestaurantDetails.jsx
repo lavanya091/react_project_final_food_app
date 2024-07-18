@@ -1,16 +1,19 @@
 import React, { useState, useEffect,useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { AppContext } from '../../context/Context';
+import cartImage from './cart_img.png';
+import {toast} from 'react-toastify'
 // import { useDispatch } from 'react-redux';
-import CartContext from '../../context/CartContext';
 import './RestaurantDetails.css';
 
 function RestaurantDetails() {
   const { id } = useParams();
+  const {cartlist, setCartlist, count, setCount } = useContext(AppContext);
   const [restaurantData, setRestaurantData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const authToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwicm9sZSI6IlBSSU1FX1VTRVIiLCJpYXQiOjE2MTk2Mjg2MTN9.nZDlFsnSWArLKKeF0QbmdVfLgzUbx1BGJsqa2kc_21Y'; // Replace with your actual token
-  const {addToCart} = useContext(CartContext);
+  const navigate =useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,9 +46,17 @@ function RestaurantDetails() {
   }, [id]);
 
   const handleAddToCart = (foodItem) => {
-    // Assuming addToCart from CartContext handles adding items to cart
-    addToCart({ ...foodItem, price: foodItem.cost });
-    console.log('Adding to cart:', foodItem);
+    const newItem = { ...foodItem, quantity: 1, menuid: foodItem.id };
+    const existingItem = cartlist.find(item => item.menuid === foodItem.id);
+    if (existingItem) {
+      const updatedCart = cartlist.map(item => 
+        item.menuid === foodItem.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCartlist(updatedCart);
+    } else {
+      setCartlist([...cartlist, newItem]);
+      setCount(count + 1);
+    }
   };
 
 
@@ -59,6 +70,16 @@ function RestaurantDetails() {
 
   return (
     <div className="restaurant-details">
+      <div className="restaurant-details-container">
+      <header className="restaurant-header">
+        <h1>Restaurant Details</h1>
+        <div className="cart-icon" onClick={() => navigate('/cart')}>
+          <img src={cartImage} alt="Cart" className="cart-image" />
+          <span className="cart-count">{cartlist.length}</span>
+        </div>
+      </header>
+      {/* Your existing code for displaying restaurant details */}
+    </div>
       <h1 className="restaurant-name">{restaurantData.name}</h1>
       <img className="restaurant-image" src={restaurantData.image_url} alt={restaurantData.name} />
       <p className="restaurant-cost">Cost for Two: ₹{restaurantData.cost_for_two}</p>

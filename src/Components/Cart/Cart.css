@@ -1,0 +1,136 @@
+.cart-container {
+    max-width: 800px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(18, 17, 17, 0.6);
+    border-radius: 8px;
+}
+
+.cart-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-main {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.cart-header, .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-header p, .cart-item p {
+    margin: 0;
+    color: #333;
+}
+
+.header-image, .header-name, .header-price, .header-quantity, .header-remove {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+
+.item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-name, .item-price, .item-quantity {
+    flex: 2;
+    text-align: center;
+    color: #333;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-quantity button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.item-quantity p {
+    margin: 0 10px;
+    color: #333;
+}
+
+.remove-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.remove-button:hover {
+    background-color: #e60000;
+}
+
+.cart-summary {
+    text-align: right;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.total-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.checkout-button:hover {
+    background-color: #388e3c;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 20px;
+}
+
+.empty-cart p {
+    margin: 20px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background-color: #1976d2;
+}

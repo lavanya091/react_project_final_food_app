@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Cart from './Cart';
 import RestaurantDetails from './fetchdata/RestaurantDetails';
 import RestaurantsList from './fetchdata/RestaurantsList';
 import Apps from './fetchdata/Apps';
